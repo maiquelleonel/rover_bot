@@ -14,7 +14,6 @@ class Rover:
     def __init__(self, positions):
         self.x = int(positions[0])
         self.y = int(positions[1])
-        self.nose = "N"
         if positions[2] in list("NSWE"):
             self.nose = positions[2]
 
