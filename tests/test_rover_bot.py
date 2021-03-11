@@ -30,13 +30,13 @@ class AcronymTest(unittest.TestCase):
         rover.move(list("RRR"))
         self.assertEqual(rover.nose, "W")
 
-    def test_move_foward_to_north(self):
+    def test_move_forward_to_north(self):
         rover = Rover([1, 1, "N"])
         rover.move(list("M"))
         self.assertEqual(rover.nose, "N")
         self.assertEqual(rover.y, 2)
 
-    def test_change_nose_to_east_and_move_foward_three_times(self):
+    def test_change_nose_to_east_and_move_forward_three_times(self):
         rover = Rover([1, 1, "N"])
         rover.move(list("RMMM"))
         self.assertEqual(rover.nose, "E")
@@ -56,12 +56,12 @@ class AcronymTest(unittest.TestCase):
         self.assertEqual(rover.y, 1)
         self.assertEqual(rover.nose, "E")
 
-    def test_trying_to_set_unknow_direction_and_receive_north(self):
+    def test_trying_to_set_unknown_direction_and_receiving_north(self):
         rover = Rover([1, 1, "P"])
         self.assertEqual(rover.nose, "N")
         self.assertNotEqual(rover.nose, "P")
 
-    def test_trying_to_apply_unknow_movement(self):
+    def test_trying_to_apply_unknown_movement(self):
         rover = Rover([1, 2, "W"])
         rover.move(list("LJ"))
         self.assertEqual(rover.nose, "S")
