@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "rover_bot"
+version = "0.1.0"
+description = ""
+authors = ["Maiquel Leonel <skywishmtfk@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+tests="scripts:tests"
+complex_moves="complex_moves:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
