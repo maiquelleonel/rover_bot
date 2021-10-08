@@ -3,7 +3,7 @@ from rover_bot import __version__
 from rover_bot.rover import Rover
 
 
-class AcronymTest(unittest.TestCase):
+class RoverTest(unittest.TestCase):
     def test_set_coordinates_and_direction_of_rover(self):
         rover = Rover([1, 2, "N"])
         self.assertEqual(rover.x, 1)
